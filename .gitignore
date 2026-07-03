@@ -5,3 +5,6 @@ dist
 .DS_Store
 npm-debug.log*
 基础资料/
+output/
+*.artifact.json
+eyeshot-share-poster.html

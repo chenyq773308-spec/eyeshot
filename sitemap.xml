@@ -232,4 +232,12 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/projects/greentown-guiyue/"/>
 <xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/greentown-guiyue/"/>
 </url>
+<url><loc>https://eyeshot.art/solutions/luxury-home/</loc>
+<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/solutions/luxury-home/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/solutions/luxury-home/"/>
+</url>
+<url><loc>https://eyeshot.art/en/solutions/luxury-home/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/solutions/luxury-home/"/>
+<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/solutions/luxury-home/"/>
+</url>
 </urlset>

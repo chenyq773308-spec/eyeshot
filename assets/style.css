@@ -335,8 +335,8 @@ body.home .home-hero .cta-row {
 }
 .texture .label small { display: block; font-weight: 400; font-size: 12px; opacity: .85; }
 .textures.material-boards { grid-template-columns: repeat(2, 1fr); gap: 22px; }
-.textures.material-boards .texture { aspect-ratio: 8/5; background: #fff; border: 1px solid var(--line); }
-.textures.material-boards .texture img { object-fit: cover; background: #fff; }
+.textures.material-boards .texture { aspect-ratio: 8/5; background: #f7f6f1; border: 1px solid var(--line); }
+.textures.material-boards .texture img { object-fit: contain; background: #f7f6f1; }
 .textures.material-boards .texture:hover img { transform: none; }
 
 /* spec table */
@@ -553,6 +553,7 @@ body.home .home-hero .cta-row {
 .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .feature.rev > .fig { order: 2; }
 .feature .fig img { border-radius: var(--radius); width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.feature .fig.fig-wide img { aspect-ratio: 16/9; object-fit: contain; background: #05080c; }
 .feature h3 { font-size: 24px; margin-bottom: 12px; }
 .feature p { color: var(--ink-soft); }
 .feature .more { display: inline-block; margin-top: 16px; color: var(--teal-deep); font-size: 14.5px; letter-spacing: .05em; }

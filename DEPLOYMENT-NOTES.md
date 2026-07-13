@@ -1,5 +1,122 @@
 # EYESHOT deployment notes
 
+## 2026-07-13 production deployment
+
+This run repeated the successful split-project path and confirmed the current Open Design release is live on `https://eyeshot.art`.
+
+### Outcome
+
+- Production domain: `https://eyeshot.art`
+- Final status: HTTP `200`
+- Release package: `release-eyeshot/`
+- GitHub repositories now aligned on `main`:
+  - `chenyq773308-spec/eyeshot`
+  - `chenyq773308-spec/eyeshot.xyz`
+- Source content commit: `c961d6e66a5098f9bb2f326f1d619b0fa3aa658a`
+- Trigger commit: `4dd5a8e972a7f702f8633fe26a61de940701ce66`
+- Active Vercel project: `eyeshot.xyz`
+- Active Vercel project ID: `prj_FZC5xDQu5C713Sqg2GmgzzilWl2u`
+- READY deployment: `dpl_DKKUbFXgH5zKKpfXd8TdrTgZo9b8`
+- Deployment URL: `https://eyeshot-hpss6nvny-sts-projects1.vercel.app`
+- Production alias: `eyeshot.art`
+
+### Path that worked
+
+1. Sync the current Open Design files into `release-eyeshot/`.
+2. Build locally with the Open Design Node path available:
+
+```bash
+PATH="/Users/chenyongqiang/.local/nodejs/bin:$PATH" npm run build
+```
+
+3. Commit the release package.
+4. Push to `chenyq773308-spec/eyeshot`.
+5. Ensure the Vercel-linked repository `chenyq773308-spec/eyeshot.xyz` also points at the same tree.
+   When histories differ or a pure trigger is needed, create a non-force trigger commit parented on the current linked repo head:
+
+```bash
+remote_url="https://github.com/chenyq773308-spec/eyeshot.xyz.git"
+git fetch "$remote_url" main
+remote_head=$(git rev-parse FETCH_HEAD)
+tree=$(git rev-parse HEAD^{tree})
+new_commit=$(printf 'Trigger Vercel production deploy\n\nContent tree matches the latest release package.\n' | git commit-tree "$tree" -p "$remote_head")
+git update-ref refs/heads/main "$new_commit"
+git push origin main
+git push "$remote_url" "${new_commit}:refs/heads/main"
+```
+
+6. List deployments on the active `eyeshot.xyz` Vercel project, not the old `eyeshot.art` project:
+
+```bash
+token=$(python3 - <<'PY'
+import json, os
+print(json.load(open(os.path.expanduser('~/.open-design/vercel.json'))).get('token',''))
+PY
+)
+
+curl -fsS -H "Authorization: Bearer $token" \
+  "https://api.vercel.com/v6/deployments?projectId=eyeshot.xyz&teamId=team_VwnzYYHnljU6gVjznYTtMNWV&limit=10"
+```
+
+7. Alias the latest READY deployment to production:
+
+```bash
+curl -fsS -X POST \
+  -H "Authorization: Bearer $token" \
+  -H 'Content-Type: application/json' \
+  "https://api.vercel.com/v2/deployments/dpl_DKKUbFXgH5zKKpfXd8TdrTgZo9b8/aliases?teamId=team_VwnzYYHnljU6gVjznYTtMNWV" \
+  -d '{"alias":"eyeshot.art"}'
+```
+
+8. Confirm alias lookup:
+
+```bash
+curl -fsS -H "Authorization: Bearer $token" \
+  "https://api.vercel.com/v4/aliases/eyeshot.art?teamId=team_VwnzYYHnljU6gVjznYTtMNWV"
+```
+
+Expected alias result for this run: `eyeshot.art -> dpl_DKKUbFXgH5zKKpfXd8TdrTgZo9b8`, project `prj_FZC5xDQu5C713Sqg2GmgzzilWl2u`.
+
+### Tooling notes
+
+- The Vercel MCP deploy action was cancelled in this run, so the reliable route was the saved Open Design Vercel token plus the Vercel REST alias API.
+- `/Users/chenyongqiang/.local/nodejs/bin/node` hung when invoked directly, but `"$OD_NODE_BIN"` could run the Vercel CLI enough to inspect version/help.
+- `/Users/chenyongqiang/Library/Application Support/com.vercel.cli/auth.json` was expired/invalid; do not rely on it for production deployment.
+- The working token source was `~/.open-design/vercel.json`.
+- Use `"${new_commit}:refs/heads/main"` in zsh. Without braces, zsh can misparse `变量:refs`.
+
+### Public verification
+
+DNS:
+
+- `eyeshot.art` local resolver: `76.76.21.21`
+- `www.eyeshot.art` CNAME: `cname.vercel-dns.com.`
+
+HTTP:
+
+- `https://eyeshot.art/`: HTTP `200`
+- `https://eyeshot.art/solutions/facade/index.html`: HTTP `200`
+- `https://eyeshot.art/solutions/landscape/index.html`: HTTP `200`
+
+Content markers:
+
+- Homepage matched `assets/img/applications/public-space/luxury-flagship-light.png`.
+- CSS matched `.solution-visual-lead` and `.visual-modules`.
+- Facade solution matched `GSG 精研组合构造` inside `.visual-modules`.
+- Landscape solution matched `.solution-visual-lead rev` and `展墙界面`.
+
+Static assets returned HTTP `200`:
+
+- `https://eyeshot.art/assets/style.css`
+- `https://eyeshot.art/assets/img/applications/public-space/luxury-flagship-light.png`
+- `https://eyeshot.art/assets/img/projects/gsg-composite-facade.png`
+- `https://eyeshot.art/assets/img/projects/poly-yuncheng-2.jpg`
+
+Screenshot evidence:
+
+- `output/verify-deploy/live-home-2026-07-13-thum.png`
+- `output/verify-deploy/live-facade-2026-07-13-thum.png`
+
 ## 2026-07-03 production deployment
 
 This note records the successful path for the current static multi-page EYESHOT site so the next iteration can repeat the same route without rediscovering the Vercel project split.

@@ -24,6 +24,14 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/products/"/>
 <xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/products/"/>
 </url>
+<url><loc>https://eyeshot.art/products/art-series/</loc>
+<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/products/art-series/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/products/art-series/"/>
+</url>
+<url><loc>https://eyeshot.art/en/products/art-series/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/products/art-series/"/>
+<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/products/art-series/"/>
+</url>
 <url><loc>https://eyeshot.art/solutions/</loc>
 <xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/solutions/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/solutions/"/>
@@ -160,13 +168,13 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/projects/the-reserve-sg/"/>
 <xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/the-reserve-sg/"/>
 </url>
-<url><loc>https://eyeshot.art/projects/ysl-flagship/</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/ysl-flagship/"/>
-<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/projects/ysl-flagship/"/>
+<url><loc>https://eyeshot.art/projects/luxury-flagship/</loc>
+<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/luxury-flagship/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/projects/luxury-flagship/"/>
 </url>
-<url><loc>https://eyeshot.art/en/projects/ysl-flagship/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/projects/ysl-flagship/"/>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/ysl-flagship/"/>
+<url><loc>https://eyeshot.art/en/projects/luxury-flagship/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://eyeshot.art/en/projects/luxury-flagship/"/>
+<xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/luxury-flagship/"/>
 </url>
 <url><loc>https://eyeshot.art/projects/wuxi-sunshine/</loc>
 <xhtml:link rel="alternate" hreflang="zh-CN" href="https://eyeshot.art/projects/wuxi-sunshine/"/>

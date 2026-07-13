@@ -1,7 +1,7 @@
 # EYESHOT 颜界 (eyeshot.art)
 
-> EYESHOT 颜界热熔天然石，以专利热熔工艺将 3mm 超薄切割的天然石材与玻璃复合（GSG 结构：玻璃-PVB-石材-PVB-玻璃），在保留天然石纹的同时实现透光、轻量化与安全性，适用于建筑幕墙、室内墙面、谷仓门与景观展墙。
-> EYESHOT fused translucent natural stone bonds 3mm ultra-thin natural stone with glass through a patented hot-fusion process (GSG structure: Glass-PVB-Stone-PVB-Glass), keeping authentic stone veining while achieving translucency, light weight and safety — for building facades, interior walls, sliding doors and landscape feature walls.
+> EYESHOT 颜界热熔天然石，以专利热熔工艺将 3mm 超薄切割的天然石材与玻璃复合（GSG 结构：玻璃-PVB-石材-PVB-玻璃），在保留天然石纹的同时实现透光、轻量化与安全性，适用于室外幕墙应用、室内墙面、透光门系统与景观展墙。
+> EYESHOT Translucent Fused Stone–Glass bonds 3mm ultra-thin natural stone with glass through a patented hot-fusion process (GSG structure: Glass-PVB-Stone-PVB-Glass), keeping authentic stone veining while achieving translucency, light weight and safety — for building facades, interior walls, translucent door systems and landscape feature walls.
 
 品牌 Slogan：透 以 颜 · 臻 于 界 / Through Clarity, Beyond Boundaries.
 
@@ -9,18 +9,18 @@
 - 材料构造：GSG 五层复合（玻璃|PVB|石材|PVB|玻璃），天然石材 3mm 超薄切割
 - 透光系统：LED 光穹匀光板，24V，色温 2700–6500K 可调
 - 幕墙技术：蒙太奇石材预演系统（3000+ 纹理数字拼图，工期缩短 40%，损耗归零）；光匣子嵌入式运维通道（十年维护成本降 65%）
-- 谷仓门 PRO 标准门片：1200×2400mm，总厚约 52.7mm，玻璃厚 8mm，上滑轮吊挂
+- 透光门系列：谷仓门Plus、旋转门、平开门、平移门、折叠门与综合应用；谷仓门Plus 标准门片 1200×2400mm
 - 纹理系列：金兰玉 Blue Pearl、雪花白 Statuario、鱼肚白 Calacatta、黑洞石 Black Basalt、毕加索 Picasso、山水云 Cloudy、云白玉 White Onyx
 
 ## 产品 Products
 - [墙板系列 Wall Panel Series](https://eyeshot.art/products/wall-panel/)：透光墙面、背景墙与立面系统
-- [谷仓门 PRO Barn Door PRO](https://eyeshot.art/products/barn-door-pro/)：以透光天然石为门片的移门系统，一门成景
+- [透光门系列 Translucent Door Series](https://eyeshot.art/products/barn-door-pro/)：谷仓门Plus、旋转门、平开门、平移门、折叠门与综合应用
 - [天然光感艺术盘 Luminous Stone Art Tray](https://eyeshot.art/products/art-tray/)：方寸之间，亿万年石纹诉说时光故事
 
 ## 解决方案 Solutions
-- [建筑幕墙 Building Facade](https://eyeshot.art/solutions/facade/)：把天然石的通透肌理，转译为可实施的幕墙系统
+- [室外幕墙应用 Exterior Facade Application](https://eyeshot.art/solutions/facade/)：把天然石的通透肌理，转译为可实施的幕墙系统
 - [室内空间 Interior](https://eyeshot.art/solutions/interior/)：墙面、门与器物，在同一空间保持纹理、尺度与施工逻辑一致
-- [景观园林 Landscape](https://eyeshot.art/solutions/landscape/)：让展墙、光影与景观外界面形成同一套材料秩序
+- [景观园林应用 Landscape](https://eyeshot.art/solutions/landscape/)：让展墙、光影与景观外界面形成同一套材料秩序
 
 ## 项目案例 Projects (16)
 - [杭州华润元起观潮 / CR Land Yuanqi Guanchao, Hangzhou](https://eyeshot.art/projects/crland-hangzhou/)：以自然为轴，让光影、材质与归家情绪在同一条动线上抵达
@@ -30,7 +30,7 @@
 - [温州华润润府 / CR Land Runfu, Wenzhou](https://eyeshot.art/projects/crland-wenzhou/)：约 8.5 米高、48 米宽的尊贵礼序大门
 - [深圳招商太子湾 / China Merchants Prince Bay, Shenzhen](https://eyeshot.art/projects/shenzhen-taiziwan/)：精致玉石吊顶厅堂，尊贵归家仪式感
 - [新加坡 The Reserve / The Reserve, Singapore](https://eyeshot.art/projects/the-reserve-sg/)：玛瑙石堡垒——珍稀材质幕墙的系统化精研
-- [圣罗兰 YSL 旗舰店（成都国金 IFC / 重庆时代广场） / Saint Laurent Flagship Stores (Chengdu IFC / Chongqing Times Square)](https://eyeshot.art/projects/ysl-flagship/)：以天然黑白根石材呈现的品牌立面（项目应用）
+- [高奢品牌旗舰店（成都国金 IFC / 重庆时代广场） / Luxury Brand Flagship Stores (Chengdu IFC / Chongqing Times Square)](https://eyeshot.art/projects/luxury-flagship/)：以天然黑白根石材呈现的品牌立面（项目应用）
 - [无锡阳光城 / Sunshine City, Wuxi](https://eyeshot.art/projects/wuxi-sunshine/)：悬浮之光——透光大理石玻璃幕墙打造的悬浮宝盒
 - [西安融创曲江印 / Sunac Qujiang Impression, Xi'an](https://eyeshot.art/projects/xian-qujiang/)：3 公里风雨连廊，归家成为沉浸式艺术体验
 - [杭州保利云城 / Poly Yuncheng, Hangzhou](https://eyeshot.art/projects/poly-yuncheng/)：轩屏为骨，画卷为魂——一座活态山水画卷轴
@@ -41,9 +41,9 @@
 - [杭州绿城云诵桂月轩 / Greentown Guiyue Pavilion, Hangzhou](https://eyeshot.art/projects/greentown-guiyue/)：845 天，创作一朵“理想的云”
 
 ## 联系 Contact
-- 蒙星 (Founder)：+86 135 1213 3553；客服专线 86-512-5383-2460
+- Sam：+86 135 1213 3553；客服专线 86-512-5383-2460
 - Email：hello@eyeshot.art
-- 地址：江苏省太仓市大连东路70号 / No.70 Dalian East Road, Taicang, Jiangsu, China；上海展厅即将开放
+- 地址：江苏省太仓市大连东路70号 / No.70 Dalian East Road, Taicang, Jiangsu, China
 
 ## 解决方案 / Solutions
 - 公共空间应用 / Public Space: https://eyeshot.art/solutions/interior/

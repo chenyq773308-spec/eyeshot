@@ -44,10 +44,6 @@ for item in payload.get("deployments", []):
     if item.get("state") == "READY" and meta.get("githubCommitSha") == commit:
         print(item.get("uid", ""))
         raise SystemExit(0)
-for item in payload.get("deployments", []):
-    if item.get("state") == "READY":
-        print(item.get("uid", ""))
-        raise SystemExit(0)
 PY
 }
 
@@ -110,7 +106,7 @@ for _ in $(seq 1 36); do
   sleep 10
 done
 
-[ -n "$deployment_id" ] || die "No READY deployment found for project $PROJECT_ID"
+[ -n "$deployment_id" ] || die "No READY deployment found for commit $commit in project $PROJECT_ID"
 printf 'Vercel READY deployment: %s\n' "$deployment_id"
 
 curl -fsS -X POST \

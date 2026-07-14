@@ -195,6 +195,7 @@ body.home .lang-switch:hover { color: #fff; border-color: rgba(255,255,255,.46);
   place-items: center;
   text-align: center;
   overflow: hidden;
+  background: #030303 url("./img/projects/the-reserve-sg-1.jpg") center / cover no-repeat;
 }
 .home-hero video {
   position: absolute;

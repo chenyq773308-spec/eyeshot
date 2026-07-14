@@ -1,5 +1,54 @@
 # EYESHOT deployment notes
 
+## 2026-07-14 deployment acceleration pass
+
+This pass turns the previously manual production route into a repeatable fast path.
+
+### Recent deployment recap
+
+- 2026-07-03: confirmed the active Vercel auto-deploy project is `eyeshot.xyz`, not the older `eyeshot.art` project. The working production action was to point the `eyeshot.art` alias to the latest READY deployment from `eyeshot.xyz`.
+- 2026-07-13: confirmed that the saved Open Design Vercel token plus the REST API is more reliable than the local Vercel CLI login state. The route worked, but still required manual Git tree alignment and manual alias inspection.
+- 2026-07-14: confirmed the current OD workspace had no persistent Git checkout. Re-cloning the GitHub repo was slow because the static site contains many large assets. The production alias reached deployment `dpl_CJpiW9uW2vJ83EVJhasSqJoarLh9` for GitHub commit `985bd41a18c44d94fed91c262869bc8eef273759`.
+
+### Root causes of slow deployment
+
+- The deployable source lived in `release-eyeshot/`, but the GitHub deployment workspace was recreated in temporary folders.
+- Full or shallow Git clones still had to negotiate a large static asset tree.
+- The Vercel CLI login state was unreliable in Open Design; the successful path was the Vercel REST API token in `~/.open-design/vercel.json`.
+- Screenshot capture is still environment-dependent. Treat screenshot failure as a rendering-tool limitation only after HTTP, DNS, content markers, CSS, and asset checks pass.
+
+### New standard fast path
+
+Use the fixed deploy workspace inside the current OD project:
+
+```text
+deploy/eyeshot-github
+```
+
+Run:
+
+```bash
+release-eyeshot/scripts/deploy-production.sh "Deploy latest EYESHOT site"
+```
+
+The script:
+
+1. Builds `release-eyeshot/`.
+2. Initializes or reuses `deploy/eyeshot-github` without downloading the full remote asset tree.
+3. Fetches only the remote `main` head as the parent commit.
+4. Syncs the current OD release package into the deploy workspace.
+5. Creates and pushes a GitHub commit to `chenyq773308-spec/eyeshot`.
+6. Polls Vercel project `eyeshot.xyz` for a READY deployment.
+7. Writes the production alias `eyeshot.art`.
+8. Verifies DNS, homepage markers, project detail CSS, and live HTML content.
+
+### Why this should be faster next time
+
+- No temporary clone is needed.
+- No Vercel CLI auth path is needed.
+- The Git commit is created from the current OD release tree and parented on remote `main`.
+- Deployment validation is a fixed checklist instead of a sequence of ad-hoc retries.
+
 ## 2026-07-13 production deployment
 
 This run repeated the successful split-project path and confirmed the current Open Design release is live on `https://eyeshot.art`.

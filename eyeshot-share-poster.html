@@ -1,0 +1,295 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EYESHOT 颜界｜官网分享海报</title>
+  <style>
+    :root {
+      --bg: #050403;
+      --fg: #fff8e8;
+      --muted: rgba(255, 248, 232, 0.66);
+      --soft: rgba(255, 248, 232, 0.42);
+      --gold: #d8b66a;
+      --gold-deep: #8b6a2d;
+      --line: rgba(216, 182, 106, 0.38);
+      --paper: #fffaf0;
+      --font-display: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "STSong", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #111;
+      font-family: var(--font-body);
+      color: var(--fg);
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .poster {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 72% 18%, rgba(216, 182, 106, 0.22), transparent 24%),
+        radial-gradient(circle at 17% 84%, rgba(255, 248, 232, 0.09), transparent 34%),
+        linear-gradient(145deg, rgba(216, 182, 106, 0.10), transparent 28%),
+        var(--bg);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+      isolation: isolate;
+    }
+
+    .poster::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: none;
+      opacity: 0;
+      z-index: -2;
+    }
+
+    .poster::after {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border: 1px solid var(--line);
+      pointer-events: none;
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0 1px, transparent 1px),
+        radial-gradient(circle at 80% 60%, rgba(216,182,106,0.08) 0 1px, transparent 1px);
+      background-size: 17px 19px, 23px 29px;
+      mix-blend-mode: screen;
+      opacity: 0.32;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .content {
+      height: 100%;
+      padding: 78px 82px 72px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 44px;
+    }
+
+    .logo {
+      width: 386px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.6));
+    }
+
+    .eyebrow {
+      text-align: right;
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.6;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      padding-top: 6px;
+      white-space: nowrap;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 318px;
+      align-items: end;
+      gap: 54px;
+    }
+
+    .hero-copy { padding-bottom: 16px; }
+
+    .kicker {
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 0.32em;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 620px;
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 92px;
+      line-height: 1.05;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .slogan {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.7;
+      letter-spacing: 0.16em;
+      max-width: 620px;
+    }
+
+    .material-line {
+      width: 184px;
+      height: 1px;
+      margin-top: 42px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .qr-panel {
+      align-self: end;
+      padding: 18px;
+      border: 1px solid rgba(216, 182, 106, 0.54);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
+        rgba(0,0,0,0.42);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.14),
+        0 24px 70px rgba(0,0,0,0.45);
+    }
+
+    .qr-safe {
+      padding: 18px;
+      background: var(--paper);
+      border: 1px solid rgba(255,255,255,0.45);
+    }
+
+    .qr-safe img {
+      width: 244px;
+      height: 244px;
+      display: block;
+      image-rendering: pixelated;
+    }
+
+    .scan-copy {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 16px;
+      letter-spacing: 0.18em;
+    }
+
+    .scan-copy span:last-child {
+      color: var(--gold);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: 0.05em;
+    }
+
+    footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 42px;
+      align-items: end;
+      border-top: 1px solid rgba(216, 182, 106, 0.28);
+      padding-top: 28px;
+    }
+
+    .contact {
+      display: flex;
+      gap: 34px;
+      flex-wrap: wrap;
+      color: var(--fg);
+      font-size: 25px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+
+    .contact strong {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.28em;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .signature {
+      color: var(--soft);
+      font-size: 14px;
+      line-height: 1.7;
+      letter-spacing: 0.18em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1120px) {
+      body {
+        padding: 0;
+        place-items: start;
+      }
+
+      .poster {
+        transform-origin: top left;
+        transform: scale(calc(100vw / 1080));
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="poster" aria-label="EYESHOT 颜界官网分享海报">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="content">
+      <header>
+        <img class="logo" src="assets/eyeshot/logo-for-dark-bg.png" alt="EYESHOT 颜界">
+        <div class="eyebrow">热熔天然石<br>LIGHT STONE SURFACE</div>
+      </header>
+
+      <main>
+        <section class="hero-copy">
+          <div class="kicker">EYESHOT.ART</div>
+          <h1>透以颜<br>臻于界</h1>
+          <p class="slogan">让天然石材在光影中呈现新的边界，为建筑、室内与商业空间提供更具辨识度的材质表达。</p>
+          <div class="material-line" aria-hidden="true"></div>
+        </section>
+
+        <aside class="qr-panel" aria-label="官网二维码">
+          <div class="qr-safe">
+            <img src="output/eyeshot-qr/eyeshot-art-qr-standard-1000.png" alt="扫描访问 eyeshot.art 官网二维码">
+          </div>
+          <div class="scan-copy">
+            <span>扫码访问官网</span>
+            <span>QR</span>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="contact">
+          <div>
+            <strong>官网</strong>
+            https://eyeshot.art
+          </div>
+          <div>
+            <strong>邮箱</strong>
+            hello@eyeshot.art
+          </div>
+        </div>
+        <div class="signature">EYESHOT 颜界<br>For refined luminous stone spaces</div>
+      </footer>
+    </div>
+  </article>
+</body>
+</html>

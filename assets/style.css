@@ -373,6 +373,16 @@ body.home .home-hero .cta-row {
 .textures.material-boards .texture { aspect-ratio: 8/5; background: #f7f6f1; border: 1px solid var(--line); }
 .textures.material-boards .texture img { object-fit: contain; background: #f7f6f1; }
 .textures.material-boards .texture:hover img { transform: none; }
+.material-more-note {
+  margin: 26px auto 0;
+  max-width: 760px;
+  padding: 16px 22px;
+  border: 1px solid color-mix(in srgb, var(--teal) 24%, var(--line));
+  color: var(--ink-soft);
+  background: color-mix(in srgb, var(--paper) 90%, var(--teal) 10%);
+  text-align: center;
+  line-height: 1.8;
+}
 
 /* homepage editorial system */
 .home-overview { background: linear-gradient(180deg, #fff 0%, #f8faf9 100%); }

@@ -18,10 +18,14 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EYESHOT 颜界", "alternateName": "EYESHOT", "url": "https://eyeshot.art", "logo": "https://eyeshot.art/assets/img/logo.png", "email": "hello@eyeshot.art", "telephone": "+86 135 1213 3553", "address": {"@type": "PostalAddress", "streetAddress": "大连东路70号", "addressLocality": "太仓", "addressRegion": "江苏", "addressCountry": "CN"}, "description": "EYESHOT 颜界热熔天然石，以专利热熔工艺将 3mm 超薄切割的天然石材与玻璃复合（GSG 结构：玻璃-PVB-石材-PVB-玻璃），在保留天然石纹的同时实现透光、轻量化与安全性，适用于室外幕墙应用、室内墙面、透光门系统、豪宅家居应用与景观展墙。", "slogan": "透 以 颜 · 臻 于 界"}</script>
 </head>
 <body class="home"><header class="site-header"><div class="wrap">
-<a class="logo" href="./index.html"><img src="./assets/eyeshot/logo-for-dark-bg.png" alt="EYESHOT 颜界 logo"></a>
+<a class="logo logo-lockup" href="./index.html" data-od-id="home-brand-lockup"><img src="./assets/eyeshot/logo-for-dark-bg.png" alt="EYESHOT 颜界 logo"><span class="brand-slogan">透 以 颜 · 臻 于 界</span></a>
 <nav class="nav"><a href="./material/index.html">材料</a><a href="./products/index.html">产品</a><a href="./products/art-series/index.html">艺术系列</a><a href="./solutions/index.html">解决方案</a><a href="./projects/index.html">项目案例</a><a href="./resources/index.html">资料下载</a><a href="./contact/index.html">联系</a></nav>
 <a class="lang-switch" href="./en/index.html">EN</a>
-</div></header><section class="hero home-hero"><video id="hero-video" muted="" playsinline="" preload="metadata" aria-hidden="true"><source src="./assets/video/eyeshot-home-avatar-motion.mp4" type="video/mp4"></video><div class="wrap"><div class="kicker">EYESHOT · FUSED TRANSLUCENT NATURAL STONE</div><h1>EYESHOT <em>颜界</em>.</h1><span class="home-slogan">透 以 颜 · 臻 于 界</span><p class="sub">热熔天然石，用于建筑表皮、室内墙面、门系统与艺术装置。</p><div class="cta-row"><a class="btn btn-primary" href="./contact/index.html">预约样板</a><a class="btn btn-ghost" href="./projects/index.html">浏览项目案例</a></div></div></section><section class="section home-overview"><div class="wrap">
+</div></header><section class="hero home-hero" data-od-id="home-hero"><video id="hero-video" muted="" playsinline="" autoplay="" loop="" preload="metadata" aria-hidden="true"><source src="./assets/video/eyeshot-home-avatar-motion.mp4" type="video/mp4"></video><div class="wrap home-hero-explainer">
+<div class="home-hero-definition-copy"><div class="kicker">EYESHOT · 热熔天然石空间解决方案</div><h1 data-od-id="home-material-definition-title">什么是热熔天然石？</h1><p class="home-hero-definition-intro">以专利热熔技术将超薄天然石与玻璃复合，保留真实石纹，让光穿透石材，获得更轻、更薄、更通透的材料表达。</p></div>
+<figure class="home-hero-definition-media" data-od-id="home-material-definition-image"><img src="./assets/img/home/fused-translucent-stone-definition.jpg" width="1472" height="1800" alt="光线穿透热熔天然石样板，呈现真实石纹与通透质感" loading="eager" fetchpriority="high"><figcaption>真实石纹与光的复合</figcaption></figure>
+<div class="home-hero-definition-list" data-od-id="home-material-definition"><article class="home-hero-definition-item" data-od-id="home-material-feature-ultra-thin"><span>01</span><div><h2>超薄切割 · 科技复合</h2><p>3mm 级超薄切割，让光穿过真实石纹，呈现更丰富、更灵动的肌理层次。</p></div></article><article class="home-hero-definition-item" data-od-id="home-material-feature-project"><span>02</span><div><h2>更好地融入设计项目</h2><p>纹理、规格、透光效果与工程节点均可随项目协同深化，准确回应空间设计。</p></div></article><article class="home-hero-definition-item" data-od-id="home-material-feature-application"><span>03</span><div><h2>更多跨界应用</h2><p>覆盖幕墙、室内、景观、门、家具与艺术装置，为跨界应用打开更多可能。</p></div></article></div>
+</div></section><section class="section home-overview"><div class="wrap">
 <div class="section-head home-lead"><div class="kicker">从材料到空间</div><h2>材料、产品、场景、案例</h2><p>先看能做什么，再进入细节。</p></div>
 <div class="home-principles"><a class="home-principle main wide" href="./material/index.html">
 <div class="home-principle-img"><img src="./assets/img/projects/gsg-composite-facade.png" alt="透光天然石材料效果与建筑表皮应用" loading="lazy"></div>
@@ -55,38 +59,5 @@
 <li><a href="mailto:hello@eyeshot.art">hello@eyeshot.art</a></li>
 <li>江苏省太仓市大连东路70号</li></ul></div></div>
 <div class="foot-bottom"><span>© 2026 EYESHOT. All rights reserved.</span><span>EYESHOT 颜界 · 热熔天然石空间解决方案</span></div>
-</div></footer><script>
-(function(){
-  var v = document.getElementById('hero-video');
-  if (!v) return;
-  var fade = 500;
-  var raf = null;
-  function animate(from, to, dur) {
-    if (raf) cancelAnimationFrame(raf);
-    var start = performance.now();
-    function step(now) {
-      var t = Math.min((now - start) / dur, 1);
-      v.style.opacity = (from + (to - from) * t).toFixed(3);
-      if (t < 1) raf = requestAnimationFrame(step);
-    }
-    raf = requestAnimationFrame(step);
-  }
-  function playIn() {
-    var p = v.play();
-    if (p && p.catch) p.catch(function(){});
-    animate(parseFloat(v.style.opacity) || 0, 1, fade);
-  }
-  v.addEventListener('canplay', playIn);
-  v.addEventListener('timeupdate', function(){
-    if (!isNaN(v.duration) && v.duration - v.currentTime <= 0.55) {
-      animate(parseFloat(v.style.opacity) || 1, 0, fade);
-    }
-  });
-  v.addEventListener('ended', function(){
-    v.style.opacity = '0';
-    setTimeout(function(){ v.currentTime = 0; playIn(); }, 100);
-  });
-  if (v.readyState >= 3) playIn();
-})();
-</script>
+</div></footer>
 </body></html>

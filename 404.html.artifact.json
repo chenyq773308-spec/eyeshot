@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "deploy/eyeshot-github/404.html",
+  "entry": "deploy/eyeshot-github/404.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-07-18T08:38:56.645Z",
+  "updatedAt": "2026-07-18T08:38:56.645Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

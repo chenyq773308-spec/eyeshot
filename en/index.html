@@ -19,10 +19,14 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"EYESHOT","alternateName":"EYESHOT 颜界","url":"https://eyeshot.art","logo":"https://eyeshot.art/assets/img/logo.png","email":"hello@eyeshot.art","telephone":"+86 135 1213 3553","address":{"@type":"PostalAddress","streetAddress":"No.70 Dalian East Road","addressLocality":"Taicang","addressRegion":"Jiangsu","addressCountry":"CN"},"description":"EYESHOT fused translucent natural stone bonds ultra-thin natural stone with glass through a hot-fusion process, preserving authentic veining while enabling translucency, light weight and safety for facades, interiors, door systems, luxury residences and landscape walls.","slogan":"Through Clarity, Beyond Boundaries"}</script>
 </head>
 <body class="home"><header class="site-header"><div class="wrap">
-<a class="logo" href="../en/index.html"><img src="../assets/eyeshot/logo-for-dark-bg.png" alt="EYESHOT logo"></a>
+<a class="logo logo-lockup" href="../en/index.html" data-od-id="home-brand-lockup"><img src="../assets/eyeshot/logo-for-dark-bg.png" alt="EYESHOT logo"><span class="brand-slogan">THROUGH CLARITY · BEYOND BOUNDARIES</span></a>
 <nav class="nav"><a href="../en/material/index.html">Material</a><a href="../en/products/index.html">Products</a><a href="../en/products/art-series/index.html">Art Series</a><a href="../en/solutions/index.html">Solutions</a><a href="../en/projects/index.html">Projects</a><a href="../en/resources/index.html">Resources</a><a href="../en/contact/index.html">Contact</a></nav>
 <a class="lang-switch" href="../index.html">中文</a>
-</div></header><section class="hero home-hero"><video id="hero-video" muted="" playsinline="" preload="metadata" aria-hidden="true"><source src="../assets/video/eyeshot-home-avatar-motion.mp4" type="video/mp4"></video><div class="wrap"><div class="kicker">EYESHOT · FUSED TRANSLUCENT NATURAL STONE</div><h1>EYESHOT.</h1><span class="home-slogan">Through Clarity · Beyond Boundaries</span><p class="sub">Fused translucent natural stone for building skins, interior walls, door systems and art installations.</p><div class="cta-row"><a class="btn btn-primary" href="../en/contact/index.html">Request samples</a><a class="btn btn-ghost" href="../en/projects/index.html">View projects</a></div></div></section><section class="section home-overview"><div class="wrap">
+</div></header><section class="hero home-hero" data-od-id="home-hero"><video id="hero-video" muted="" playsinline="" autoplay="" loop="" preload="metadata" aria-hidden="true"><source src="../assets/video/eyeshot-home-avatar-motion.mp4" type="video/mp4"></video><div class="wrap home-hero-explainer">
+<div class="home-hero-definition-copy"><div class="kicker">EYESHOT · FUSED TRANSLUCENT NATURAL STONE</div><h1 data-od-id="home-material-definition-title">What Is Fused Translucent Natural Stone?</h1><p class="home-hero-definition-intro">Patented hot-fusion technology bonds ultra-thin natural stone with glass, preserving authentic veining while creating a lighter, thinner and more luminous material.</p></div>
+<figure class="home-hero-definition-media" data-od-id="home-material-definition-image"><img src="../assets/img/home/fused-translucent-stone-definition.jpg" width="1472" height="1800" alt="Light passing through a fused translucent natural stone sample reveals its authentic veining" loading="eager" fetchpriority="high"><figcaption>Authentic veining shaped by light</figcaption></figure>
+<div class="home-hero-definition-list" data-od-id="home-material-definition"><article class="home-hero-definition-item" data-od-id="home-material-feature-ultra-thin"><span>01</span><div><h2>Ultra-thin Cutting · Advanced Composite</h2><p>Approximately 3 mm cutting lets light pass through authentic stone veining, revealing richer and more dynamic depth.</p></div></article><article class="home-hero-definition-item" data-od-id="home-material-feature-project"><span>02</span><div><h2>Better Integration with Design Projects</h2><p>Veining, dimensions, lighting and construction details can be developed around each project’s spatial concept.</p></div></article><article class="home-hero-definition-item" data-od-id="home-material-feature-application"><span>03</span><div><h2>Broader Cross-disciplinary Applications</h2><p>From facades and interiors to landscapes, doors, furniture and art installations, it opens more cross-disciplinary possibilities.</p></div></article></div>
+</div></section><section class="section home-overview"><div class="wrap">
 <div class="section-head home-lead"><div class="kicker">From Material To Space</div><h2>Material, products, scenarios and projects</h2><p>See what it can do first, then enter the details.</p></div>
 <div class="home-principles"><a class="home-principle main wide" href="../en/material/index.html">
 <div class="home-principle-img"><img src="../assets/img/projects/gsg-composite-facade.png" alt="Translucent natural stone effect for building facade applications" loading="lazy"></div>
@@ -56,38 +60,5 @@
 <li><a href="mailto:hello@eyeshot.art">hello@eyeshot.art</a></li>
 <li>No.70 Dalian East Road, Taicang, Jiangsu, China</li></ul></div></div>
 <div class="foot-bottom"><span>© 2026 EYESHOT. All rights reserved.</span><span>EYESHOT — Fused translucent natural stone solutions</span></div>
-</div></footer><script>
-(function(){
-  var v = document.getElementById('hero-video');
-  if (!v) return;
-  var fade = 500;
-  var raf = null;
-  function animate(from, to, dur) {
-    if (raf) cancelAnimationFrame(raf);
-    var start = performance.now();
-    function step(now) {
-      var t = Math.min((now - start) / dur, 1);
-      v.style.opacity = (from + (to - from) * t).toFixed(3);
-      if (t < 1) raf = requestAnimationFrame(step);
-    }
-    raf = requestAnimationFrame(step);
-  }
-  function playIn() {
-    var p = v.play();
-    if (p && p.catch) p.catch(function(){});
-    animate(parseFloat(v.style.opacity) || 0, 1, fade);
-  }
-  v.addEventListener('canplay', playIn);
-  v.addEventListener('timeupdate', function(){
-    if (!isNaN(v.duration) && v.duration - v.currentTime <= 0.55) {
-      animate(parseFloat(v.style.opacity) || 1, 0, fade);
-    }
-  });
-  v.addEventListener('ended', function(){
-    v.style.opacity = '0';
-    setTimeout(function(){ v.currentTime = 0; playIn(); }, 100);
-  });
-  if (v.readyState >= 3) playIn();
-})();
-</script>
+</div></footer>
 </body></html>

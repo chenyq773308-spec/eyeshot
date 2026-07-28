@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "deploy/eyeshot-github/projects/greentown-guiyue/index.html",
+  "entry": "deploy/eyeshot-github/projects/greentown-guiyue/index.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-07-18T08:38:56.607Z",
+  "updatedAt": "2026-07-18T08:38:56.607Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

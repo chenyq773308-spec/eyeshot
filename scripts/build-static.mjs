@@ -6,6 +6,7 @@ const dist = path.join(root, 'dist');
 
 const dirs = [
   'assets',
+  'email-assets',
   'contact',
   'downloads',
   'en',

@@ -1,0 +1,175 @@
+{
+  "same_model": true,
+  "cameras": 10,
+  "objects": 755,
+  "status": "geometry_and_material_reconstruction_review",
+  "campaign_replaced": false,
+  "master_sha256": "0c9adb83b3a3efff96cd0d19f5002ea83704a8f241234e65796b5e52e9965d09",
+  "scenes": [
+    {
+      "id": 1,
+      "name": "建筑外立面",
+      "reference": "../site/assets/campaign/scene-01.jpg",
+      "render": "renders/scene-01.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 6.59,
+      "render_sha256": "62f6371fece3ae799671dd125324f63a773a873ed90d030c52cb2aa0ae0eade4",
+      "render_sha256_verified": true,
+      "review_note": "外立面分格与前池已有几何，景观层次、玻璃反射和背景仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 2,
+      "name": "景观庭院",
+      "reference": "../site/assets/campaign/scene-02.jpg",
+      "render": "renders/scene-02.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 11.19,
+      "render_sha256": "5c139cabd4c165dff2de8672869a6ff20903dc990ff73e7877c949a422be076d",
+      "render_sha256_verified": true,
+      "review_note": "庭院屏风朝向已修正；连续景观、树冠形体和机位构图仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 3,
+      "name": "墙板展厅",
+      "reference": "../site/assets/campaign/scene-03.jpg",
+      "render": "renders/scene-03.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 8.99,
+      "render_sha256": "f1b291fa185abe2a44fc2e1b61fa3886056de0729b2fd3162c1fe9916e32f289",
+      "render_sha256_verified": true,
+      "review_note": "800×2400 三框型尺寸通过；外窗借景、石纹选择与光线仍需接近认可画面。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 4,
+      "name": "奢品展廊",
+      "reference": "../site/assets/campaign/scene-04.jpg",
+      "render": "renders/scene-04.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 10.89,
+      "render_sha256": "760eb39bc3e5596e5227cd18ab3310b1d65ad2c3fbdd59a2b21731aa57de6742",
+      "render_sha256_verified": true,
+      "review_note": "黑洞石改为孔隙发光；展柜细节、光晕与重点照明仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 5,
+      "name": "会客厅",
+      "reference": "../site/assets/campaign/scene-05.jpg",
+      "render": "renders/scene-05.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 9.14,
+      "render_sha256": "b6be42ab4add89d5c5d077267cf14a05a30262d8bb3ddb9b818ecabad023b378",
+      "render_sha256_verified": true,
+      "review_note": "门片、双滚轮、拉手与轨道已建立并可联动；室内陈设和借景仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 6,
+      "name": "礼宾玄关",
+      "reference": "../site/assets/campaign/scene-06.jpg",
+      "render": "renders/scene-06.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 8.61,
+      "render_sha256": "e29a2bcb1948b1bac20385bd60a6151c5e56e9c9a3fbd54cb329163f8f7b100a",
+      "render_sha256_verified": true,
+      "review_note": "偏轴铰轴与门片从属关系通过；玄关开口和灯光仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 7,
+      "name": "星空影院",
+      "reference": "../site/assets/campaign/scene-07.jpg",
+      "render": "renders/scene-07.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 9.81,
+      "render_sha256": "276e18e4cb59203f5b2ae56af88d00bdae633b5d041f1d33fb4025ba4bb5e971",
+      "render_sha256_verified": true,
+      "review_note": "六个躺椅、黑洞石墙顶和遮光围护已建立；暗场漏光与摄影质感仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 8,
+      "name": "石纹餐厅",
+      "reference": "../site/assets/campaign/scene-08.jpg",
+      "render": "renders/scene-08.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 9.84,
+      "render_sha256": "662e81be94503fdec8d9999a4d8c20cbe469840741022906c1e196bfff4e4eb9",
+      "render_sha256_verified": true,
+      "review_note": "2×2 四拼镜像与六把餐椅已建立；整体构图和环境照明仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 9,
+      "name": "艺术盘茶室",
+      "reference": "../site/assets/campaign/scene-09.jpg",
+      "render": "renders/scene-09.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 11.65,
+      "render_sha256": "b1dc0fc8fa27b010c5f3e8284a61d8e3065db247d7b05d2c1cbd222609f086d0",
+      "render_sha256_verified": true,
+      "review_note": "薄圆石盘、粗糙原石底座和茶具已建立；茶具折射和材质细节仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "id": 10,
+      "name": "材料工坊",
+      "reference": "../site/assets/campaign/scene-10.jpg",
+      "render": "renders/scene-10.png",
+      "review": "needs_visual_refinement",
+      "render_seconds": 8.72,
+      "render_sha256": "767acec9eab43e27c61ada23e69f312e0e8ff75731446c68dac5006b09af2558",
+      "render_sha256_verified": true,
+      "review_note": "八块材料2×4与工作台已建立；材料标识、样品构造和展示层次仍需深化。",
+      "render_engine": "BLENDER_EEVEE",
+      "render_size": [
+        960,
+        540
+      ]
+    }
+  ],
+  "render_count": 10,
+  "all_renders_verified": true,
+  "visual_reconstruction_complete": false,
+  "web_model_sha256": "5708c4fe8133084a0a7c45f25479bf1d07f48ce0589c01e32043c6030acb26af",
+  "web_material_note": "GLB 不支持 Blender 程序木纹：网页保留胡桃木基础色，程序木纹保留于 Blender 主文件。"
+}
